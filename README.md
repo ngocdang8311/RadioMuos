@@ -13,7 +13,7 @@ RadioMuos is a lightweight SDL2 frontend for streaming radio stations through
 - Radio Browser search by name, tag, country, recent searches, and top stations.
 - Favorites and recently played history persisted on device.
 - Stream metadata display when the station exposes ICY metadata.
-- Full-width audio visualizer with spectrum, bars, and waveform modes.
+- Full-width audio visualizer with neon bars, spectrum, and waveform modes.
 - Sleep timer and volume controls.
 - No Python package dependencies; uses Python stdlib plus system SDL2/mpv/ffmpeg.
 
@@ -26,6 +26,9 @@ application/RadioMuos -> /MUOS/application/RadioMuos
 ```
 
 Then open `RadioMuos` from the muOS Applications menu.
+
+GitHub release ZIPs contain the same `application/RadioMuos` folder layout, so
+they can be extracted directly to the root of the muOS SD card.
 
 ## Controls
 
@@ -53,9 +56,10 @@ This file is intentionally ignored by git.
 ## Notes
 
 - The visualizer uses a separate `ffmpeg` process reading the same stream as
-  `mpv`. HLS streams are read with `-re` to avoid bursty frame updates.
+  `mpv`. The default neon bars mode reads low-rate PCM and draws clean colorful
+  bars in Python; spectrum/waves modes use ffmpeg video filters. HLS streams are
+  read with `-re` to avoid bursty frame updates.
 - Radio Browser lists are cached for one day so tag/country browsing still
   opens quickly after the first load.
 - If a stream ends or fails, the now-playing panel reports the mpv event instead
   of staying stuck on buffering.
-

@@ -11,4 +11,4 @@ application/RadioMuos/state.json.tmp
 .remote-*
 *.bak-*
 backup-before-*/
-
+dist/

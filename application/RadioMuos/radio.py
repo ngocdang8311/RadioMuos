@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""RadioMuos v0.2 — stream radio internet tren muOS.
+"""RadioMuos v0.3 — stream radio internet tren muOS.
 
 Phase 2: tab system + Radio Browser API search + history + persist state.
 
@@ -765,7 +765,7 @@ class RadioApp:
 
 
 def main():
-    print(f"RadioMuos v0.2 starting (Python {sys.version.split()[0]})", file=sys.stderr)
+    print(f"RadioMuos v0.3 starting (Python {sys.version.split()[0]})", file=sys.stderr)
     app = RadioApp()
     try:
         app.run()
