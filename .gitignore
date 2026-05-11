@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+*.tmp
+*.log
+
+# Runtime state generated on-device.
+application/RadioMuos/state.json
+application/RadioMuos/state.json.tmp
+
+# Local transfer / backup artifacts.
+.remote-*
+*.bak-*
+backup-before-*/
+
